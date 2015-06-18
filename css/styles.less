@@ -4,19 +4,22 @@ body {
     margin: 0;
     padding: 0;
     font-family: Roboto;
+    background-color: #f4f4f4
 }
 
 section {
     &.content {
         background-color: #fff;
         border-bottom: 3px solid #50b2ac;
+        max-width: 900px;
         border-radius: 10px;
-        padding: 45px 60px;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+        padding: 45px 30px;
+        margin: 20px auto;
     }
     &.login {
-        max-width: 600px;
+        max-width: 540px;
         margin: auto;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
         h2 {
             font-size: 28px;
             color: #555;
@@ -29,6 +32,125 @@ section {
             font-size: 12px;
             color: #8c8c8e;
             text-align: center;
+        }
+    }
+}
+
+.checkbox {
+    display: block;
+    border-radius: 5px;
+    background-color: rgba(200, 209, 215, .2);
+    border: 1px solid rgba(200, 209, 215, .2);
+    padding: 10px;
+    cursor: pointer;
+    font-family: Roboto Slab;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .checkbox-icon-wrapper,
+    .checkbox-text {
+        display: table-cell;
+        vertical-align: middle;
+        cursor: pointer;
+        word-break: break-word;
+    }
+    .checkbox-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 2px;
+        background-color: #fff;
+        display: block;
+    }
+    &:hover {
+        box-shadow: 0 0 50px 30px #e7f7f0 inset;
+        border-color: #f9f9f9;
+        background: #e7f7f0;
+        .checkbox-icon {
+            box-shadow: 0 0 1px 1px rgba(136, 216, 181, .75)inset;
+        }
+    }
+    .checkbox-text {
+        padding-left: 10px;
+    }
+    &.checked {
+        background-color: rgba(136, 216, 181, .2);
+        border-color: rgba(136, 216, 181, .2);
+        .checkbox-icon {
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAYAAACXtf2DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjFCQzgxRDQxNUQxMTFFNUE5QzhBMjFERENDMUNERDQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjFCQzgxRDUxNUQxMTFFNUE5QzhBMjFERENDMUNERDQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyMUJDODFEMjE1RDExMUU1QTlDOEEyMUREQ0MxQ0RENCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyMUJDODFEMzE1RDExMUU1QTlDOEEyMUREQ0MxQ0RENCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PiLgwjYAAAIpSURBVHjarJSxTxpRHMc5xJ7VKjFHm6pt1ZgYJ92IDk2Y/AvK4NKtg3Hs1DRp6NDBgdoR4oIuMBE1ykRMxJCAAgmBARKCIUECSQNUKBK44/l95iDPE4KAv+Q73Pv93ud77/d7dypCiGoQMcEVi8V1URSPfT7fRGv1mQy4TCbzsdFo3GCN1Gq1i1Ao9Pq5DLhkMrksSdJfwgRMzpDTDAyPxWLzgF+z8Hq9/s/hcKwjzw9kgDZMo+cJBbxssVg2AKctGu4b7vf7BbQhyMJxklubzfYZ4Lf3b48T9gW3Wq2j1WrVo4Tb7fYvgE614P0M2WQyvQD8hIXj9tScTucWcNPQSAveq4HBYNBUKpV9BVxyuVxf28JZg0AgoMXAXAB8okVtboy6XC7/VsLdbvc35Gagl4/gTYNwOPwGA7uU94n4IjcpkIWXSqUf5GE0PB7PT+TedYTLoUFPT5WbAfxOwVT5fH6LrrF53KJt5N5Do3Jdx+DNZvMqWnOlMCFoyZ9sNrtBT8WuB4PBHez7AI11g9+fABKMRuNaoVCIkMfBvjmJRCIW1M8+Fa6SezdMTfR6/UoulzsnHSIej++hbg561ZxR12AGSU8yKQjCUiqVOlTCE4mEA/l5Ft6TgVw8BGmhhWg0utuEw/CA5/kFrI+z8J4NGBMKmvN6vb/S6fSRTqdbxPOEEv4UA65dEcdxavlua+VB3kD/6S+nTW3XAXcKtTwXWiNCkqqPuBNgADewtbLRA8QrAAAAAElFTkSuQmCC') no-repeat 50% 50% #88D8B5;
+        }
+        &:hover {
+            .checkbox-icon {
+                box-shadow: none
+            }
+        }
+    }
+}
+
+.radio {
+    display: block;
+    border-radius: 5px;
+    background-color: rgba(200, 209, 215, .2);
+    border: 1px solid rgba(200, 209, 215, .2);
+    padding: 10px;
+    cursor: pointer;
+    font-family: Roboto Slab;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .radio-icon-wrapper,
+    .radio-text {
+        display: table-cell;
+        vertical-align: middle;
+        cursor: pointer;
+        word-break: break-word;
+    }
+    .radio-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 2px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: block;
+    }
+    &:hover {
+        box-shadow: 0 0 50px 30px #e7f7f0 inset;
+        border-color: #f9f9f9;
+        background: #e7f7f0;
+        .radio-icon {
+            box-shadow: 0 0 1px 1px rgba(136, 216, 181, .75)inset;
+        }
+    }
+    .radio-text {
+        padding-left: 10px;
+    }
+    &.checked {
+        background-color: rgba(136, 216, 181, .2);
+        border-color: rgba(136, 216, 181, .2);
+        .radio-icon {
+            background-color: #88d8b5;
+            position: relative;
+            &:before {
+                width: 20px;
+                height: 20px;
+                content: '';
+                border-radius: 50%;
+                background-color: #fff;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .5);
+            }
+        }
+        &:hover {
+            .radio-icon {
+                box-shadow: none;
+            }
         }
     }
 }
