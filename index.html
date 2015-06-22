@@ -2,22 +2,19 @@
 
 <head>
     <link rel="stylesheet" href="dev/styles.css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
     <section class="login content">
         <h2>Your credentials for tracking progress</h2>
         <form>
-
-            <div class='form-row'>
-
+            <div class='form-row error'>
                 <input class='empty'>
                 <label>Your e-mail</label>
                 <div class='error-message'>Вкажіть Ваше ім'я</div>
-
             </div>
             <div class='form-row'>
                 <div class='form-input-wrapper'>
@@ -30,7 +27,6 @@
                 <button class='button primary'>Так, відстежувати мій прогрес </button>
                 <button class='button link'>Dont't report just start</button>
             </div>
-
         </form>
         <footer>Please enter your credentials and click "Start and report my progress" to enable result tracking. Otherwise, click "Do not report, just start".
         </footer>
@@ -38,19 +34,19 @@
     <section class="content">
         <label class="checkbox">
             <span class="checkbox-icon-wrapper">
-                        <span class="checkbox-icon"></span>
+                        <button class="checkbox-icon"></button>
             </span>
             <label class="checkbox-text">question answer option</label>
         </label>
         <label class="checkbox">
             <span class="checkbox-icon-wrapper">
-                        <span class="checkbox-icon"></span>
+                        <button class="checkbox-icon"></button>
             </span>
             <label class="checkbox-text">question answer option with long text question answer option with long text question answer option with long text question answer option with long text</label>
         </label>
         <label class="checkbox checked">
             <span class="checkbox-icon-wrapper">
-                        <span class="checkbox-icon"></span>
+                        <button class="checkbox-icon"></button>
             </span>
             <label class="checkbox-text">question answer option with long text question answer option with long text question answer option with long text question answer option with long textquestion answer option with long text question answer option with long text question answer option with long text question answer option with long textquestion answer option with long text question answer option with long text question answer option with long text question answer option with long textquestion answer option with long text question answer option with long text question answer option with long text question answer option with long text</label>
         </label>
@@ -58,21 +54,18 @@
     <section class='content'>
         <label class="radio">
             <span class="radio-icon-wrapper">
-                 <span class="radio-icon"></span>
+                 <button class="radio-icon"></button>
             </span>
             <label class="radio-text">question answer option</label>
         </label>
         <label class="radio checked">
             <span class="radio-icon-wrapper">
-                 <span class="radio-icon"></span>
+                 <button class="radio-icon"></button>
             </span>
             <label class="radio-text">question answer option</label>
         </label>
-
-
     </section>
     <section class='content'>
-
         <ul class="single-select-image">
             <li class='select-image checked'>
                 <div class="select-image-wrapper">
@@ -85,7 +78,6 @@
                     <div class="preview-thumbnail" style="background-image: url(http://staging.easygenerator.com/storage/image/a89b4aad-0e4c-4147-ac17-c4c341c5ae86.jpg); background-size: cover;">
                         <button type="button"></button>
                     </div>
-
                 </div>
             </li>
             <li class='select-image'>
@@ -95,10 +87,7 @@
                     </div>
                 </div>
             </li>
-
-
         </ul>
-
     </section>
     <section class='content'>
         <ul class="statement">
@@ -113,12 +102,12 @@
             <li class='statement-item'>
                 <span class="statement-option ">
                      <span class="radio-icon-wrapper">
-                 <span class="radio-icon"></span>
+                 <button class="radio-icon"></button>
                 </span>
                 </span>
                 <span class="statement-option">
                      <span class="radio-icon-wrapper">
-                 <span class="radio-icon checked"></span>
+                 <button class="radio-icon checked"></button>
                 </span>
                 </span>
                 <span class="statement-label">question answer option with long text</span>
@@ -126,12 +115,12 @@
             <li class='statement-item'>
                 <span class="statement-option ">
                      <span class="radio-icon-wrapper">
-                 <span class="radio-icon"></span>
+                 <button class="radio-icon"></button>
                 </span>
                 </span>
                 <span class="statement-option radio-icon-wrapper">
                      <span class="radio-icon-wrapper">
-                 <span class="radio-icon"></span>
+                 <button class="radio-icon"></button>
                 </span>
                 </span>
                 <span class="statement-label">question answer option with long text</span>
@@ -139,21 +128,71 @@
             <li class='statement-item'>
                 <span class="statement-option ">
                      <span class="radio-icon-wrapper">
-                 <span class="radio-icon checked"></span>
+                 <button class="radio-icon checked"></button>
                 </span>
                 </span>
                 <span class="statement-option ">
                      <span class="radio-icon-wrapper">
-                 <span class="radio-icon"></span>
+                 <button class="radio-icon"></button>
                 </span>
                 </span>
                 <span class="statement-label">question answer option with long textquestion answer option with long textquestion answer option with long textquestion answer option with long text
                 </span>
             </li>
-
-
         </ul>
     </section>
+    <section class="content fill-in-the-blank">
+        <input class="blankInput">
+        <div class="select-wrapper">
+            <div class="value">Оберіть варіант...</div>
+        </div>
+
+        <div class="select-wrapper active">
+            <div class="value">Оберіть варіант...</div>
+        </div>
+        <div class="select-container" style="position: absolute; left: 884px; top: 2320px; width: 214px;">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>Sncididunt ut labore et dolore magna aliqua.incididunt ut labore et dolore magna aliqua.incididunt ut labore et dolore magna aliqua.incididunt ut labore et dolore magna aliqua.</li>
+            </ul>
+        </div>
+    </section>
+    <section class='content'>
+        <section class="hotspot">
+            <div class="hotspot-background" data-bind="background : background, area: { click: addMark }" style="height: 487px; width: 941px; background-image: url(http://staging.easygenerator.com/storage/image/6fb3aad0-bac7-4bc7-b49c-a3b0269209d6.jpg?width=941&amp;height=785); background-position: 0px 0px; background-repeat: no-repeat;">
+                <ul>
+                    <li class="pulsemark multiple" style="left: 323.5px; top: 233px;">
+                        <div class="pin"></div>
+                        <div class="mark">
+                            <span class="impulse"></span>
+                        </div>
+                    </li>
+                    <li class="pulsemark multiple" style="left: 523.5px; top: 333px;">
+                        <div class="pin"></div>
+                        <div class="mark">
+                            <span class="impulse"></span>
+                        </div>
+                    </li>
+                    <li class="pulsemark " style="left: 723.5px; top: 233px;">
+                        <div class="pin"></div>
+                        <div class="mark">
+                            <span class="impulse"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </section>
+    <section class="content">
+        <section class="drag-and-drop">
+            
+            
+            
+        </section>
+
+    </section>
+
 </body>
 
 </html>
