@@ -26,8 +26,8 @@ gulp.task('css', function () {
             browsers: ['last 1 Chrome version', 'last 1 Firefox version', 'last 1 Explorer version', 'last 1 Safari version', 'last 1 iOS version'],
             cascade: false
         }))
-        .pipe(gulp.dest(config.output));
-});
+        .pipe(gulp.dest(config.output))
+ });
 
 gulp.task('watch', function () {
     gulp.run('css');
