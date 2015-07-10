@@ -22,12 +22,15 @@ gulp.task('css', function () {
             strictUnits: true
         }))
         .pipe($.csso())
+        .pipe($.base64({
+            maxImageSize: 165536
+        }))
         .pipe($.autoprefixer({
             browsers: ['last 1 Chrome version', 'last 1 Firefox version', 'last 1 Explorer version', 'last 1 Safari version', 'last 1 iOS version'],
             cascade: false
         }))
         .pipe(gulp.dest(config.output))
- });
+});
 
 gulp.task('watch', function () {
     gulp.run('css');

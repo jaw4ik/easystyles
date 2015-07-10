@@ -1,3 +1,6 @@
+@import 'variables.less';
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -84,46 +87,49 @@ input:invalid {
     font-size:18px;
     border: 2px solid black;
     &.primary {
-        background-color: #50b2ac;
-        border-color: #43aaa3;
-        color: #fff;
+        background-color: @button-primary-background-color;
+        border-color: @button-primary-border-color;
+        color: @button-primary-font-color ;
         font-size: 18px;
         height: 60px;
         max-width: 100%;
         &:hover {
-            background-color: #43aaa3;
+            background-color:@button-primary-hover-background-color ;
+            border-color: @button-primary-hover-border-color;
         }
     }
     &.link {
         display: block;
         max-width: 320px;
-        color: #8c8c8e;
+        color: @button-link-font-color;
         border: 0;
         background: none;
         font-size: 16px;
     }
     &.danger {
-        border-color: #f16162;
-        color: #f16162;
+        border-color: @button-danger-border-color;
+        color: @button-danger-font-color;
+        background-color: @button-danger-background-color;
         &:hover {
-            color: #fff;
-            background-color: #f16162;
+            color:@button-hover-danger-font-color ;
+            background-color: @button-hover-danger-background-color;
         }
     }
     &.info {
-        border-color: #e5e5e5;
-        color: #cbcaca;
+        border-color: @button-info-border-color;
+        color: @button-info-font-color;
         &:hover {
-            color: #bab9b9;
-            border-color: #cbcaca;
+            color: @button-hover-info-font-color;
+            border-color: @button-hover-info-border-color;
         }
     }
     &.success {
-        border-color: #43aaa3;
-        color: #50b2ac;
+        border-color: @button-success-border-color;
+        color: @button-success-font-color;
+        background-color: @button-success-background-color;
         &:hover{
-            color:#fff;
-            background-color: #50b2ac;
+            color:@button-hover-success-font-color;
+            background-color: @button-hover-success-background-color;
         
         }
     }
@@ -194,12 +200,7 @@ input:invalid {
 ul {
     list-style: none;
 }
-@styled-content-font-color: #222222;
-@styled-content-links-font-color: #7dc9cd;
-@styled-content-links-hover-font-color: #50a1d7;
-@styled-content-mark-background-color: #faaf4a;
-@styled-content-ul-marker-color: #76cbe3;
-@styled-content-cite-marker-color: #76cbe3;
+
 .styled-content {
     padding: 20px 0;
     text-align: justify;

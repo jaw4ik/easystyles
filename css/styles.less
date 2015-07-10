@@ -1,5 +1,6 @@
-@import 'common.less';
 @import 'variables.less';
+@import 'common.less';
+
 
 .header {
     height: 300px;
@@ -14,7 +15,7 @@
         background: @header-color-line-background;
    }
    &.default-background {
-       background-image:@header-default-background-image ;
+       background-image:@header-default-background-image;
    }
    .logo-holder {
        height: 70px;
@@ -593,6 +594,8 @@ form {
 
 .hotspot {
     position: relative;
+    .question-image-wrapper{
+    overflow-y: auto;
     .hotspot-background {
         position: relative;
         border-radius: 10px;
@@ -643,6 +646,7 @@ form {
                 width: 50px;
             }
         }
+    }
     }
 }
 
@@ -925,15 +929,22 @@ form {
     padding: 16px;
     padding-bottom: 0;
     margin: 0 0 20px 0;
-
-    > .drag-and-drop-text-draggable {
+    
+    .drag-and-drop-connect{
+        &:after{
+            clear:both;
+            content:'';
+            display:table;
+        }
+    }
+    .drag-and-drop-text-draggable {
         margin-bottom: 20px;
         margin-right: 33px;
         float: left;
         display: block;
     }
 
-    > .drag-and-drop-text-draggable:nth-child(4n + 1) {
+    .drag-and-drop-text-draggable:nth-child(4n) {
         margin-right: 0;
     }
 
