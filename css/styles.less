@@ -1083,7 +1083,6 @@ form {
     content: "";
     position: absolute;
 
-
     &.active {
         background-color: rgba(21,46,64,0.6);
         border-color: #ffffff;
@@ -1095,6 +1094,16 @@ form {
 
         .drag-and-drop-text-dropspot-tooltip-text {
             display: block;
+        }
+    }
+    
+    &.dropped{
+        .drag-and-drop-text-dropspot-tooltip-image {
+            display: none;
+        }
+
+        .drag-and-drop-text-dropspot-tooltip-text {
+            display: none;
         }
     }
 }
