@@ -516,8 +516,8 @@ form {
         color: #9e9e9e;
         vertical-align: middle;
         &:after {
-            height: 20px;
-            width: 20px;
+            height: 21px;
+            width: 21px;
             content: '';
             background-image: @arrow-down;
             background-position: 50% 50%;
@@ -992,10 +992,6 @@ form {
 }
 .drag-and-drop-text-draggable {
     max-width: 200px;
-    -moz-min-width: 200px;
-    -ms-min-width: 200px;
-    -o-min-width: 200px;
-    -webkit-min-width: 200px;
     min-width: 200px;
     border: @drag-and-drop-draggable-border-width @drag-and-drop-draggable-border-style @drag-and-drop-draggable-border-color;
     border-bottom-width: @drag-and-drop-draggable-border-bottom-width;
@@ -1005,12 +1001,15 @@ form {
     background-color: @drag-and-drop-draggable-background-color;
     padding: 6px 10px;
     white-space: nowrap;
-    cursor: move;
+    cursor:move;
     font-size: @drag-and-drop-draggable-font-size;
-    font-family: 'roboto-regular', 'OpenSans';
     height: 52px;
     letter-spacing: 0, 1px;
-
+    background-color: @drag-and-drop-draggable-background-color;    
+    color: @drag-and-drop-draggable-font-color;
+    &.ui-draggable-dragging{
+        background-color:@drag-and-drop-draggable-dragging-background-color; 
+    }
     > div {
         position: relative;
         -moz-text-overflow: ellipsis;
@@ -1069,7 +1068,7 @@ form {
     text-overflow: ellipsis;
 }
 .drag-and-drop-text-dropspot {
-    background-color: rgba(115,130,140,0.6);
+    background-color: @dropspot-background-color;
     box-shadow: inset 2px 3px 5px 0 rgba(0,0,0,0.25);
     border-radius: 6px;
     border-width: 1px;
@@ -1085,7 +1084,7 @@ form {
 
 
     &.active {
-        background-color: rgba(21,46,64,0.6);
+        background-color: @dropspot-background-color;
         border-color: #ffffff;
         line-height: normal;
 
