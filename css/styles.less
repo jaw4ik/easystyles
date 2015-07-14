@@ -1234,8 +1234,10 @@ form {
     .objective-info{
         background-color: @objective-info-background-color;
         color:@objective-info-font-color;
-
-    
+    }
+    .canvas-styles{
+        color: @objective-list-item-canvas-background;
+        border-color: @objective-list-item-filled-canvas-background;
     }
 }
 
@@ -1305,6 +1307,10 @@ font-family: Roboto Slab;
         &:before{
             border-top-color: @mastered-score-tooltip-background-color;
         }
+
+    }
+    &.mastered{
+        background-color: @mastered-score-completed-check-background-color;
     }
 }
 
