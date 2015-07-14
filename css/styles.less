@@ -37,7 +37,7 @@
 .content {
     background: @content-container-background-color;
     border-bottom: 3px solid @content-container-border-color;
-    border-radius: 10px;
+    border-radius:@content-container-border-radius;
     padding: 45px 30px;
     margin: 20px auto;
     font-family: Roboto;
@@ -1244,6 +1244,7 @@ form {
 
 .objectives-list-item {
     border-bottom-color: @objectives-list-item-border-color;
+    border-radius: @objective-list-item-border-radius;
     &:hover {
         border-color: @objectives-list-item-hover-border-color;
     }
