@@ -12,7 +12,7 @@
    }
    &.default-background {
        background-image:@header-default-background-image;
-       &.module-404{
+       &.module-404, &.module-xAPIError{
            background: @default-404-header-background;
        
        }
@@ -65,7 +65,20 @@
         font-family: Roboto Slab
     }
 }
-
+.xapi-error-container {
+    h1 {
+        font-family: Roboto Slab;
+        font-size: 53px;
+        color: @xApi-error-header-color;
+        line-height: 100px;
+    }
+    .xapi-error-container-description{
+        color:@xApi-error-description-color;
+        font-size: 18px;
+    
+    }
+    
+}
 .content {
     background: @content-container-background-color;
     border-bottom: 3px solid @content-container-border-color;
