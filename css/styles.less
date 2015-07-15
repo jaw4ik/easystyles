@@ -12,7 +12,16 @@
    }
    &.default-background {
        background-image:@header-default-background-image;
+       &.module-404{
+           background: @default-404-header-background;
+       
+       }
    }
+    
+    
+    
+    
+    
    .logo-holder {
        height: 70px;
        max-width: 960px;
@@ -78,6 +87,13 @@
 }
 
 .learning-content {
+    &.collapsed{
+        .learning-content-title {
+            border-bottom-left-radius:  @content-container-border-radius;
+        }
+    }
+    
+    
     position: relative;
     .learning-content-title {
         position: absolute;
@@ -86,7 +102,7 @@
         height: 40px;
         background-color: @learning-content-title-background-color;
         border-bottom-right-radius: 35px;
-        border-top-left-radius: 10px;
+        border-top-left-radius: @content-container-border-radius;
         text-transform: uppercase;
         font-family: Roboto Slab;
         color: @learning-content-title-font-color;
@@ -97,6 +113,7 @@
         width: 232px;
         user-select: none;
         cursor: pointer;
+        
         span {
             display: table-cell;
             vertical-align: middle;
