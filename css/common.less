@@ -108,18 +108,10 @@ input:invalid {
         position:relative;
         font-weight:400;
         &:hover{
-            color:@button-link-hover-font-color;
-            border-color: #656565;
-            &:before{
-            position: absolute;
-            width: 100%;
-            content:'';
-                top:100%;
-                margin-top:-1px;
-                border-bottom: 1px solid #cdcdcd;
+           .button-link-hover;
             }
         }
-    }
+    
     &.danger {
         border-color: @button-danger-border-color;
         color: @button-danger-font-color;
