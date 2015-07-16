@@ -1629,8 +1629,17 @@ font-family: Roboto Slab;
         margin: 0 0 20px;
         line-height: 30px;
         padding-left: 60px;
+        list-style-type: none;
+        counter-reset: ol-counter;
         li {
             list-style-position: inside;
+            &:before{
+                content: counter(ol-counter) '.';
+                counter-increment: ol-counter;
+                font-size: 22px;
+                line-height: 1;
+                margin-right: 10px;
+            }
             h1 {
                 display: inline;
             }
