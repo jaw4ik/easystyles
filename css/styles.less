@@ -1535,73 +1535,7 @@ font-family: Roboto Slab;
         line-height: 30px;
     }
     .table-wrapper {
-        table {
-            margin: 20px;
-            text-align: left;
-            table-layout: fixed;
-            font-size: 16px;
-            border: none;
-            border-collapse: collapse;
-            display: inline-table;
-            color: @styled-content-font-color;
-            caption {
-                margin: 15px;
-            }
-            tbody {
-                opacity: .9;
-                font-size: 16px;
-                th {
-                    font-family: Roboto;
-                    color: #43aaa3;
-                }
-                td {
-                    background-color: #f3f3f3;
-                }
-            }
-            thead {
-                opacity: .9;
-                font-size: 16px;
-                font-family: Roboto Slab;
-                th {
-                    background: #a8c4da;
-                }
-            }
-            tr {
-                &:first-child {
-                    td {
-                        &:last-child {
-                            border-top-right-radius: 10px;
-                        }
-                        &:first-child {
-                            border-top-left-radius: 10px;
-                        }
-                    }
-                    th {
-                        &:last-child {
-                            border-top-right-radius: 10px;
-                        }
-                        &:first-child {
-                            border-top-left-radius: 10px;
-                        }
-                    }
-                }
-                &:last-child {
-                    td {
-                        &:first-child {
-                            border-bottom-left-radius: 10px;
-                        }
-                        &:last-child {
-                            border-bottom-right-radius: 10px;
-                        }
-                    }
-                    th {
-                        &:first-child {
-                            border-bottom-left-radius: 10px;
-                        }
-                    }
-                }
-            }
-        }
+        .styled-content-table();
     }
     ul {
         list-style: none;
@@ -1667,54 +1601,6 @@ font-family: Roboto Slab;
             max-width: 100%;
         }
     }
-}
-.styled-content .table-wrapper table tr + tr td,
-.styled-content .table-wrapper table tr + tr th {
-    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0)0, rgba(255, 255, 255, 0)10px, #f3f3f3 10px, #f3f3f3 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(243, 243, 243, 0)), color-stop(10px, rgba(243, 243, 243, 0)), color-stop(10px, #50697a), color-stop(100%, #50697a));
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0)0, rgba(255, 255, 255, 0)10px, #f3f3f3 10px, #f3f3f3 100%);
-    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0)0, rgba(255, 255, 255, 0)10px, #f3f3f3 10px, #f3f3f3 100%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0)0, rgba(255, 255, 255, 0)10px, #f3f3f3 10px, #f3f3f3 100%);
-}
-
-.styled-content .table-wrapper table td,
-.styled-content .table-wrapper table th {
-    padding: 25px 20px 20px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border: none;
-    text-align: left;
-    background: #f3f3f3;
-}
-
-.styled-content .table-wrapper table thead + caption + tbody tr:first-child td,
-.styled-content .table-wrapper table thead + caption + tbody tr:first-child th {
-    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0)0, rgba(255, 255, 255, 0)10px, #f3f3f3 10px, #f3f3f3 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(243, 243, 243, 0)), color-stop(10px, rgba(243, 243, 243, 0)), color-stop(10px, #50697a), color-stop(100%, #50697a));
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0)0, rgba(255, 255, 255, 0)10px, #f3f3f3 10px, #f3f3f3 100%);
-    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0)0, rgba(255, 255, 255, 0)10px, #f3f3f3 10px, #f3f3f3 100%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0)0, rgba(255, 255, 255, 0)10px, #f3f3f3 10px, #f3f3f3 100%);
-}
-
-.styled-content .table-wrapper table thead tr:last-child td:first-child,
-.styled-content .table-wrapper table thead tr:last-child th:first-child {
-    border-bottom-left-radius: 0;
-}
-
-.styled-content .table-wrapper table thead + caption + tbody tr:first-child td:first-child,
-.styled-content .table-wrapper table thead + caption + tbody tr:first-child th:first-child {
-    border-top-left-radius: 0;
-}
-
-.styled-content .table-wrapper table thead + tbody tr:first-child td:first-child,
-.styled-content .table-wrapper table thead + tbody tr:first-child th:first-child {
-    border-top-left-radius: 0px;
-}
-
-.styled-content .table-wrapper table thead + tbody tr:first-child td,
-.styled-content .table-wrapper table thead + tbody tr:first-child th {
-    background: linear-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 10px, rgb(243, 243, 243) 10px, rgb(243, 243, 243) 100%);
 }
 
 @-moz-keyframes pulsate {
