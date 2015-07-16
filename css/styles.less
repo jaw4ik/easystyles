@@ -239,10 +239,27 @@ form {
                 }
             }
         }
+            
         .primary {
             width: 100%;
             margin: 0 auto 20px;
+            padding: 0 20px;
+            overflow: visible;
+            text-overflow: initial;
+            
+            span {
+                display: inline-block;
+                max-width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                vertical-align: middle;
+            }
+            
+            &:after{
+                content: '*';
+            }
         }
+        
         .link {
             margin: 0 auto;
         }
