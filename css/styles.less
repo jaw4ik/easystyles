@@ -250,7 +250,6 @@ form {
             span {
                 display: inline-block;
                 max-width: 95%;
-                padding-right: 5px;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 vertical-align: middle;
@@ -1419,7 +1418,9 @@ font-family: Roboto Slab;
 }
 
 .mastered-score-tooltip{
-    background-color: @mastered-score-check-background-color;
+    width: 12px;
+    height: 12px;
+    background-image: @mastered-score-check-background-image;
     
     .mastered-score-tooltip-text{
         background-color: @mastered-score-tooltip-background-color;
@@ -1429,7 +1430,7 @@ font-family: Roboto Slab;
         }
     }
     &.mastered{
-        background-color: @mastered-score-completed-check-background-color;
+        background-image: @mastered-score-completed-check-background-image;
     }
 }
 
