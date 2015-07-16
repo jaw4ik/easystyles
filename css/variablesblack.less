@@ -168,9 +168,15 @@
 @styled-content-mark-background-color: #1d5062;
 @styled-content-cite-marker-color: #33b3e2;
     .styled-content-ul-marker{
-        font-size: 14px;
-        content: "\25c6 ";
-        color: #33b3e2;
+        content: "";
+        position: relative;
+        display: inline-block;
+        left: -14px;
+        width: 6px;
+        height: 6px;
+        background-color: #33b3e2;
+        vertical-align: middle;
+        transform: rotate(45deg);
     }    
     
     
