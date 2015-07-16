@@ -438,6 +438,7 @@ form {
             }
         }
         .preview-thumbnail {
+            position: relative;
             display: block;
             height: 200px;
             width: 250px;
@@ -445,6 +446,16 @@ form {
             background-repeat: no-repeat;
             background-attachment: scroll;
             border-radius: 3px;
+            overflow: hidden;
+            
+            .thumbnail{
+                  position: absolute;
+                  top: -6000px;
+                  bottom: -6000px;
+                  right: -6000px;
+                  left: -6000px;
+                  margin: auto;
+            }
         }
     }
 }
