@@ -102,6 +102,22 @@ input:invalid {
         border: 0;
         background: none;
         font-size: 16px;
+        border-bottom: 1px solid transparent;
+        width:auto;
+        padding: 5px 0;
+        position:relative;
+        &:hover{
+            color:@button-link-hover-font-color;
+            border-color: #656565;
+            &:before{
+            position: absolute;
+            width: 100%;
+            content:'';
+                top:100%;
+                margin-top:-1px;
+                border-bottom: 1px solid #cdcdcd;
+            }
+        }
     }
     &.danger {
         border-color: @button-danger-border-color;
