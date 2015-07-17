@@ -7,10 +7,10 @@ var $ = require('gulp-load-plugins')({
 
 var config = {
     output: './dev/'
-}
+};
 
 gulp.task('css', function () {
-    gulp.src(['./css/black.less','./css/lango.less'])
+    gulp.src(['./css/black.less', './css/lango.less', './css/green.less'])
         .pipe($.plumber({
             errorHandler: function (error) {
                 console.log(error);
