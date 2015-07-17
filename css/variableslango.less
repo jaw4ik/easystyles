@@ -17,6 +17,7 @@
 @content-container-border-color:#7dc9cd;
 @content-container-border-radius:10px;
 @login-form-title-font-color:#3e3d40;
+     @form-container-width:660px;
 @form-input-border-color: #abbbc6;
 @form-input-font-color:#333333;
 @form-input-hover-border-color: #60b5b9;
@@ -74,7 +75,7 @@
 @checkbox-container-hover-border-color: transparent;
 @checkbox-container-hover-background-color: #f5f5f5;
 @checkbox-icon-background-color:transparent ;
-@checkbox-icon-hover-shadow:0 0 1px 1px rgba(163,163,163,.75)inset;
+@checkbox-icon-hover-shadow:0 0 1px 2px rgba(169,169,169,1)inset;
 @checkbox-icon-checked-background-color: #60b5b9;
     /*radio question type*/
     @radio-font-color:#333333;
@@ -83,7 +84,7 @@
 @radio-container-hover-border-color: transparent;
 @radio-container-hover-background-color: #f5f5f5;
 @radio-icon-background-color: transparent;
-@radio-icon-hover-shadow: 0 0 1px 1px rgba(163,163,163,.75)inset;
+@radio-icon-hover-shadow: 0 0 1px 2px rgba(169,169,169,1)inset;
 @radio-icon-checked-background-color: #60b5b9;
     /*single select image question type*/
     @single-select-image-border-color: #e6e6e6;
@@ -167,12 +168,14 @@
     @text-matching-target-drag-border-color:#9ad3d6;
     @text-matching-target-drag-background-color:#e7f7f0;
     /*styled content*/
+    @styled-content-seperator-border-width:200px;
     @styled-content-seperator-border-top-color: #eaeaea;
     @styled-content-seperator-border-bottom-color: transparent;
     @styled-content-font-color: #333333;
 @styled-content-links-font-color: #60b5b9;
 @styled-content-links-hover-font-color: #60b5b9;
 @styled-content-mark-background-color: #8fcbce;
+    @marked-text-border-radius:0px;
 @styled-content-cite-marker-color: #60b5b9;
     .styled-content-ul-marker{
         position: relative;
@@ -183,15 +186,17 @@
         display: inline-block;
         width: 25px;
         padding-bottom: 2px;
+        padding-left:10px;
         top:2px;
     }    
     @open-question-font-color:#444;
     
     /*buttons*/
+@button-font-weight:400;
    @button-primary-font-color: #fff;
 @button-primary-background-color: #7dc9cd;
-@button-primary-border-color: #78c1c5;
-@button-primary-hover-border-color: #73b8bc;   
+@button-primary-border-color: #73b8bc;
+@button-primary-hover-border-color: #60b5b9;   
 @button-primary-hover-background-color: #60b5b9;
     
 @button-link-font-color: #8c8c8e;    
@@ -260,8 +265,9 @@
             opacity: .9;
             font-size: 16px;
             th {
-                font-family: Roboto;
+                font-family: Lato;
                 color: #43aaa3;
+                font-weight: 400;
             }
             td {
                 background-color: #f3f3f3;
@@ -271,9 +277,10 @@
         thead {
             opacity: .9;
             font-size: 16px;
-            font-family: Roboto Slab;
+            font-family: Lato;
             th {
                 background: #afdadc;
+                font-weight:400;
             }
 
             + caption{
