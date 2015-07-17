@@ -521,7 +521,7 @@ form {
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    .statement-headers-group,
+    .statement-headers-group
     {
         height: 60px;
         display: table;
@@ -532,6 +532,13 @@ form {
         width: 100%;
         table-layout: fixed;
         word-wrap: break-word;
+
+        &:hover{
+            .statement-label,.statement-option{
+                background-color: @statement-answers-background-color-hover;
+            }
+        }
+
         .statement-label {
             vertical-align: middle;
             display: table-cell;
@@ -566,6 +573,9 @@ form {
             border-radius: 50%;
             display: block;
             box-shadow: @radio-icon-hover-shadow;
+            &:hover{
+                box-shadow: @statement-radio-icon-hover-box-shadow;
+            }
             &.checked {
                 background-color: @radio-icon-checked-background-color;
                 position: relative;
