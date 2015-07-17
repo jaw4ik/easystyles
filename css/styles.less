@@ -548,6 +548,15 @@ form {
                 border-bottom-left-radius: @statement-options-border-radius;
             }
         }
+        &:hover{
+            .statement-option{
+                background-color: black;
+            } 
+            .statement-label{
+            background-color: black;
+            }
+        }
+        
     }
     .statement-label {
         vertical-align: middle;
@@ -569,6 +578,7 @@ form {
             &.checked {
                 background-color: @radio-icon-checked-background-color;
                 position: relative;
+                box-shadow:@statement-radio-icon-checked-shadow;
                 &:before {
                     width: 20px;
                     height: 20px;
