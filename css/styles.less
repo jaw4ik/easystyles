@@ -539,6 +539,18 @@ form {
             }
         }
 
+        &.checked{
+            .statement-label,.statement-option{
+                background-color: @statement-answers-background-color-checked;
+            }
+            
+            &:hover{
+                .statement-label,.statement-option{
+                    background-color: @statement-answers-background-color-checked;
+                }
+            }
+        }
+
         .statement-label {
             vertical-align: middle;
             display: table-cell;
