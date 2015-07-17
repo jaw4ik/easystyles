@@ -302,7 +302,7 @@ form {
         border-radius: 2px;
         background-color: @checkbox-icon-background-color;
         display: block;
-        box-shadow: @checkbox-icon-hover-shadow;
+        box-shadow: @checkbox-icon-shadow;
     }
     &:hover {
         border-color: @checkbox-container-hover-border-color;
@@ -315,7 +315,7 @@ form {
         padding-left: 10px;
     }
     &.checked {
-        background-color: @checkbox-container-hover-background-color;
+        background-color: @checkbox-container-checked-background-color;
         border-color: @checkbox-container-hover-border-color;
         .checkbox-icon {
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAYAAACXtf2DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjFCQzgxRDQxNUQxMTFFNUE5QzhBMjFERENDMUNERDQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjFCQzgxRDUxNUQxMTFFNUE5QzhBMjFERENDMUNERDQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyMUJDODFEMjE1RDExMUU1QTlDOEEyMUREQ0MxQ0RENCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyMUJDODFEMzE1RDExMUU1QTlDOEEyMUREQ0MxQ0RENCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PiLgwjYAAAIpSURBVHjarJSxTxpRHMc5xJ7VKjFHm6pt1ZgYJ92IDk2Y/AvK4NKtg3Hs1DRp6NDBgdoR4oIuMBE1ykRMxJCAAgmBARKCIUECSQNUKBK44/l95iDPE4KAv+Q73Pv93ud77/d7dypCiGoQMcEVi8V1URSPfT7fRGv1mQy4TCbzsdFo3GCN1Gq1i1Ao9Pq5DLhkMrksSdJfwgRMzpDTDAyPxWLzgF+z8Hq9/s/hcKwjzw9kgDZMo+cJBbxssVg2AKctGu4b7vf7BbQhyMJxklubzfYZ4Lf3b48T9gW3Wq2j1WrVo4Tb7fYvgE614P0M2WQyvQD8hIXj9tScTucWcNPQSAveq4HBYNBUKpV9BVxyuVxf28JZg0AgoMXAXAB8okVtboy6XC7/VsLdbvc35Gagl4/gTYNwOPwGA7uU94n4IjcpkIWXSqUf5GE0PB7PT+TedYTLoUFPT5WbAfxOwVT5fH6LrrF53KJt5N5Do3Jdx+DNZvMqWnOlMCFoyZ9sNrtBT8WuB4PBHez7AI11g9+fABKMRuNaoVCIkMfBvjmJRCIW1M8+Fa6SezdMTfR6/UoulzsnHSIej++hbg561ZxR12AGSU8yKQjCUiqVOlTCE4mEA/l5Ft6TgVw8BGmhhWg0utuEw/CA5/kFrI+z8J4NGBMKmvN6vb/S6fSRTqdbxPOEEv4UA65dEcdxavlua+VB3kD/6S+nTW3XAXcKtTwXWiNCkqqPuBNgADewtbLRA8QrAAAAAElFTkSuQmCC') no-repeat 50% 50% @checkbox-icon-checked-background-color;
@@ -370,7 +370,7 @@ form {
         padding-left: 10px;
     }
     &.checked {
-        background-color: @radio-container-hover-background-color;
+        background-color: @radio-container-checked-background-color;
         border-color: @radio-container-hover-border-color;
         .radio-icon {
             background-color: @radio-icon-checked-background-color;
@@ -1405,16 +1405,18 @@ font-family: @secondary-font;
         right: 10px;
         top: 7px;
         &.expand {
-            background: @expand-button-background-image-expand 50% 8px no-repeat @expand-button-background-color;
+            background: @expand-button-background-image-expand 50% 9px no-repeat @expand-button-background-color;
         }
     }
     &:hover {
         .expand-button {
             background: @expand-button-background-image-hover center no-repeat @expand-button-hover-background-color;
             border-color: @expand-button-hover-border-color;
+            box-shadow: @expand-button-box-shadow-hover;
             &.expand {
-                background: @expand-button-background-image-hover-expand 50% 8px no-repeat @expand-button-hover-background-color;
+                background: @expand-button-background-image-hover-expand 50% 9px no-repeat @expand-button-hover-background-color;
                 border-color: @expand-button-hover-border-color;
+                box-shadow: @expand-button-box-shadow-hover;
             }
         }
     }
