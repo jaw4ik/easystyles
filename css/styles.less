@@ -147,7 +147,8 @@
         padding-left: 50px;
         font-size: 15px;
         line-height: 1;
-        width: 232px;
+        max-width: 232px;
+        padding-right: 40px;
         user-select: none;
         cursor: pointer;
         
@@ -536,6 +537,18 @@ form {
         &:hover{
             .statement-label,.statement-option{
                 background-color: @statement-answers-background-color-hover;
+            }
+        }
+
+        &.checked{
+            .statement-label,.statement-option{
+                background-color: @statement-answers-background-color-checked;
+            }
+            
+            &:hover{
+                .statement-label,.statement-option{
+                    background-color: @statement-answers-background-color-checked;
+                }
             }
         }
 
