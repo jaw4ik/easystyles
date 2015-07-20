@@ -515,9 +515,8 @@ form {
     .statement-option {
         display: table-cell;
         vertical-align: middle;
-        max-width: 90px;
-        width: 90px;
-        padding-left: 10px;
+        width: 80px;
+        padding: 0 20px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -533,6 +532,23 @@ form {
         width: 100%;
         table-layout: fixed;
         word-wrap: break-word;
+
+        .statement-option + .statement-option{
+            position: relative;
+
+            &:before{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                display: block;
+                width: 1px;
+                height: 20px;
+                margin-top: -10px;
+                vertical-align: middle;
+                background-color: rgba(142,142,143,0.3);
+            }
+        }
 
         &:hover{
             .statement-label,.statement-option{
