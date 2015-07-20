@@ -1063,10 +1063,14 @@ form {
     table-layout: fixed;
     width: 100%;
     word-wrap: break-word;
+    color: @text-matching-source-font-colour;
 }
 .text-matchig-source-text {
     display: table-cell;
     height: 100%;
+    font-family: @text-matching-font-family;
+    font-size: 16px;
+    font-weight: 400;
     vertical-align: middle;
     white-space: pre-wrap;
     width: 100%;
@@ -1074,6 +1078,9 @@ form {
 .text-matching-target-wrapper {
     height: 100%;
     width: 100%;
+    font-family: @text-matching-font-family;
+    font-size: 16px;
+    font-weight: 400;
 }
 .text-matching-target-text:before {
     width: 6px;
@@ -1091,13 +1098,14 @@ form {
     border-bottom: @text-matching-source-border-bottom-width @text-matching-source-border-style @text-matching-target-border-colour;
     border-radius: 7px;
     font-size: @text-matching-target-font-size;
+    font-family: @text-matching-font-family;
     cursor: move;
     display: block;
     height: 100%;
     position: relative;
     width: 100%;
     z-index: 1;
-    color:@text-matching-source-font-colour;
+    color: @text-matching-target-font-colour;
 &:before {
         background-color: transparent;
         background-image:@puzzle-out;
@@ -1115,24 +1123,27 @@ form {
     
 
     &.handle {
+        font-family: @text-matching-font-family;
+        font-weight: 400;
+        font-size: 16px;
         border-color: @text-matching-target-drag-border-color;
         box-shadow: @text-matching-target-drag-shadow;
         z-index: 100;
-        color:@text-matching-source-font-colour;
+        color:@text-matching-target-font-colour;
         background-color:@text-matching-target-drag-background-color;
         &:before {
-        background-color: transparent;
-        background-image:@puzzle-out-dragging;
-        background-repeat: no-repeat;
-        color: #666666;
-        content: "";
-        height: 31px;
-        left: -20px;
-        margin-top: -16px;
-        position: absolute;
-        top: 50%;
-        width: 36px;
-    }
+            background-color: transparent;
+            background-image:@puzzle-out-dragging;
+            background-repeat: no-repeat;
+            color: #666666;
+            content: "";
+            height: 31px;
+            left: -20px;
+            margin-top: -16px;
+            position: absolute;
+            top: 50%;
+            width: 36px;
+        }
     }
 }
 .text-matching-target-text-wrapper {
