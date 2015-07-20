@@ -10,7 +10,7 @@ var config = {
 };
 
 gulp.task('css', function () {
-    gulp.src(['./css/black.less', './css/lango.less', './css/green.less'])
+    gulp.src(['./css/black.less', './css/lango.less', './css/flat.less', './css/grey.less'])
         .pipe($.plumber({
             errorHandler: function (error) {
                 console.log(error);
