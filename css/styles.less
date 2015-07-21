@@ -1242,7 +1242,7 @@ form {
         color: #666666;
         content: "";
         height: 31px;
-        left: -21px;
+        left: -20px;
         margin-top: -16px;
         position: absolute;
         top: 50%;
@@ -1320,18 +1320,18 @@ form {
 }
 
 .text-matching-target-placeholder-text-wrapper {
-    border: @text-matching-placeholder-border-width @text-matching-placeholder-border-style @text-matching-placeholder-font-color;
+    border: @text-matching-placeholder-border-width @text-matching-placeholder-border-style @text-matching-placeholder-border-color;
     border-left: 0;
     border-radius: @text-matching-placeholder-border-radius;
     display: table;
     table-layout: fixed;
-    background-color: @text-matching-placeholder-background-color;
+    background-color: transparent;
     height: 100%;
     width: 100%;
 }
 
 .text-matching-target-placeholder-wrapper.hover .text-matching-target-placeholder-text-wrapper {
-    border-color: @text-matching-placeholder-font-color;
+    border-color: @text-matching-placeholder-border-color-hover;
     background-color: @text-matching-placeholder-background-color;
 }
 
