@@ -1,6 +1,18 @@
 .header {
+    position:relative;
     height: 300px;
-    box-shadow: 0 50px 74px -60px rgba(0,0,0,.75);
+    
+    &:after{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        box-shadow: 0 0 23px rgba(0,0,0,.75);
+        top: 220px;
+        bottom: 0;
+        height: 80px;
+        width: 100%;
+        border-radius: 50%;
+    }
 
     &:before {
         content: '';
