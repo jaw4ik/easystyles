@@ -215,7 +215,7 @@
         text-align: center;
         max-width: 460px;
         border-top: 1px solid @login-form-footer-border-top-color;
-        margin: auto;
+        margin: 30px auto 0;
         padding-top:15px;
     }
 }
@@ -928,6 +928,16 @@ form {
 .questions-navigation-container{
     border-left: 1px solid @question-navigation-container-border-color;
 }
+
+.question{
+
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
 .question-navigation-bar {
     width: 135px;
     height: 40px;
@@ -936,6 +946,7 @@ form {
     font-size: 16px;
     background-color: @question-navigation-bar-background-color;
     color:@question-navigation-bar-font-color;
+
     a {
         border-radius: 50%;
         display: table-cell;
