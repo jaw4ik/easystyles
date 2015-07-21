@@ -10,7 +10,7 @@ var config = {
 };
 
 gulp.task('css', function () {
-    gulp.src(['./css/black.less', './css/lango.less', './css/flat.less', './css/grey.less', './css/cartoon.less'])
+    gulp.src(['./css/black.less', './css/lango.less', './css/flat.less', './css/grey.less', './css/cartoon.less', './css/default.less'])
         .pipe($.plumber({
             errorHandler: function (error) {
                 console.log(error);
@@ -22,9 +22,6 @@ gulp.task('css', function () {
             strictUnits: true
         }))
         .pipe($.csso())
-        .pipe($.base64({
-            maxImageSize: 165536
-        }))
         .pipe($.autoprefixer({
             browsers: ['last 1 Chrome version', 'last 1 Firefox version', 'last 1 Explorer version', 'last 1 Safari version', 'last 1 iOS version'],
             cascade: false
