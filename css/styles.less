@@ -1920,7 +1920,12 @@ form {
         border-top-color: @styled-content-seperator-border-top-color;
         border-bottom-color: @styled-content-seperator-border-bottom-color;
     }
-
+    &:after{
+        display: block;
+        content:'';
+        clear:both;
+        
+    }
     &:first-child:before {
         display: none;
     }
