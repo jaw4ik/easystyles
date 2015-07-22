@@ -88,7 +88,16 @@ input:invalid {
     font-size: 18px;
     border: 2px solid black;
     font-family: @main-font;
-
+    &.default {
+        max-width: 100%;
+        font-size: 18px;
+        border-color: @button-default-border-color;
+        color: @button-default-font-color;
+        &:hover {
+            background-color: @button-default-hover-background-color;
+            color: @button-hover-default-font-color;
+        }
+    }
     &.primary {
         background-color: @button-primary-background-color;
         border-color: @button-primary-border-color;
