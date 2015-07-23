@@ -825,6 +825,8 @@ form {
         border-bottom: 1px solid @fib-input-border-color;
         background-color: transparent;
         outline: none;
+        max-width: 100%;
+        box-sizing: border-box;
 
         &:hover, &:focus {
             border-color: @fib-input-hover-border-color;
@@ -850,6 +852,7 @@ form {
         line-height: 29px;
         color: #9e9e9e;
         vertical-align: middle;
+        max-width:100%;
 
         &:after {
             height: 22px;
@@ -928,7 +931,7 @@ form {
                     content: '';
                     transform: rotate(45deg);
                     top: 4px;
-                    left: 183px;
+                    right:19px;
                 }
             }
 
