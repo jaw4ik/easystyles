@@ -207,6 +207,7 @@
     font-family: @main-font;
     color: #3e3d40;
     font-size: 18px;
+    box-shadow:@content-container-box-shadow;
 }
 
 .login {
@@ -1084,7 +1085,6 @@ form {
 .text-matching-caption {
     position: relative;
     display: inline-block;
-    height: 40px;
     margin-bottom: 20px;
     margin-top: 10px;
     margin-left: 80px;
@@ -1692,11 +1692,18 @@ form {
     &:hover {
         border-color: @objectives-list-item-hover-border-color;
     }
+    .objective-image-holder{
+        border-top-left-radius:  @objective-list-item-border-radius;
+        border-top-right-radius:  @objective-list-item-border-radius;
+    }
 
     .objective-info {
-        background-color: @objective-info-background-color;
+        background: @objective-info-background-color;
         color: @objective-info-font-color;
         box-shadow: @objective-info-box-shadow;
+        border-bottom-left-radius:  @objective-list-item-border-radius;
+        border-bottom-right-radius:  @objective-list-item-border-radius;
+        
     }
 
     .canvas-styles {
