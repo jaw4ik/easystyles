@@ -1,0 +1,190 @@
+﻿.styled-content {
+    text-align: justify;
+    word-wrap: break-word;
+    font-family: @secondary-font;
+    color: @styled-content-font-color;
+
+
+    &:before {
+        content: '';
+        display: block;
+        width: @styled-content-seperator-border-width;
+        margin: 40px auto;
+        border-style: solid;
+        border-width: 1px 0;
+        border-top-color: @styled-content-seperator-border-top-color;
+        border-bottom-color: @styled-content-seperator-border-bottom-color;
+    }
+    &:after{
+        display: block;
+        content:'';
+        clear:both;
+        
+    }
+    &:first-child:before {
+        display: none;
+    }
+
+    p {
+        margin: 0 0 20px;
+        line-height: 30px;
+    }
+
+    a {
+        color: @styled-content-links-font-color;
+        text-decoration: underline;
+        cursor: pointer;
+        line-height: 30px;
+
+        &:hover {
+            color: @styled-content-links-hover-font-color;
+        }
+    }
+
+    h1 {
+        font-size: 26px;
+        font-weight: 700;
+        text-align: justify;
+        margin: 35px 0 20px;
+        line-height: 40px;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 700;
+        text-align: justify;
+        margin: 35px 0 20px;
+        text-transform: none;
+        line-height: 36px;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: justify;
+        margin: 35px 0 20px;
+        text-transform: none;
+        line-height: 30px;
+    }
+
+    cite {
+        position: relative;
+        display: block;
+        margin: 15px 145px;
+        font-size: 18px;
+        line-height: 30px;
+        white-space: pre-line;
+        padding: 10px 40px;
+        overflow: hidden;
+
+        &:before {
+            position: absolute;
+            font: 50px Helvetica;
+            font-weight: 700;
+            color: @styled-content-cite-marker-color;
+            line-height: 35px;
+            content: "\201C";
+            margin-left: -35px;
+        }
+
+        &:after {
+            position: absolute;
+            font: 50px Helvetica;
+            font-weight: 700;
+            color: @styled-content-cite-marker-color;
+            line-height: 35px;
+            content: "\201D";
+            bottom: -23px;
+            margin-left: 10px;
+        }
+    }
+
+    mark {
+        background-color: @styled-content-mark-background-color;
+        border-radius: @marked-text-border-radius;
+        line-height: 30px;
+    }
+
+    .table-wrapper {
+        .styled-content-table();
+    }
+
+    ul {
+        list-style: none;
+        margin: 0 0 20px;
+        line-height: 30px;
+        padding-left: 60px;
+
+        li {
+            position: relative;
+            list-style-position: outside;
+
+            &:before {
+                .styled-content-ul-marker();
+            }
+
+            h1 {
+                display: inline;
+            }
+
+            h2 {
+                display: inline;
+            }
+
+            h3 {
+                display: inline;
+            }
+        }
+    }
+
+    ol {
+        margin: 0 0 20px;
+        line-height: 30px;
+        padding-left: 60px;
+        list-style-type: none;
+        counter-reset: ol-counter;
+
+        li {
+            list-style-position: inside;
+
+            &:before {
+                content: counter(ol-counter) '.';
+                counter-increment: ol-counter;
+                font-size: 22px;
+                line-height: 1;
+                margin-right: 10px;
+            }
+
+            h1 {
+                display: inline;
+            }
+
+            h2 {
+                display: inline;
+            }
+
+            h3 {
+                display: inline;
+            }
+        }
+    }
+
+    u {
+        text-decoration: none;
+        border-bottom: 1px solid @styled-content-font-color;
+        line-height: 30px;
+    }
+
+    .image-wrapper {
+
+        &[style*="float:left"],
+        &[style*="float: left"] {
+            margin: 20px 25px 20px 0;
+        }
+
+        img {
+            border-radius: 5px;
+            max-width: 100%;
+        }
+    }
+}

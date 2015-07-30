@@ -1,16 +1,20 @@
 var gulp = require('gulp'),
-    del = require('del');
+    del = require('del'),
+    folders = require('gulp-folders'),
+    path = require('path'),
+    argv = require('yargs').argv;
 
 var $ = require('gulp-load-plugins')({
     lazy: true
 });
 
 var config = {
-    output: './dev/'
+    output: './css/',
+    pathToConfigs: './less/configs'
 };
 
-gulp.task('css', function () {
-    gulp.src(['./css/black.less', './css/lango.less', './css/flat.less', './css/grey.less', './css/cartoon.less', './css/default.less'])
+gulp.task('css', $.folders(config.pathToConfigs, function (folder) {
+    return gulp.src(path.join(config.pathToConfigs, folder, '*.less'))
         .pipe($.plumber({
             errorHandler: function (error) {
                 console.log(error);
@@ -26,12 +30,12 @@ gulp.task('css', function () {
             browsers: ['last 1 Chrome version', 'last 1 Firefox version', 'last 1 Explorer version', 'last 1 Safari version', 'last 1 iOS version'],
             cascade: false
         }))
-        .pipe(gulp.dest(config.output))
-});
+        .pipe(gulp.dest(path.join(config.output, folder)));
+}));
 
 gulp.task('watch', function () {
     gulp.run('css');
-    gulp.watch('./css/*.less', ['css']);
+    gulp.watch('./less/**/*.less', ['css']);
 });
 
 gulp.task('webserver', function () {
