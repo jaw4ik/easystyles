@@ -892,6 +892,11 @@
     padding: 16px;
     padding-bottom: 0;
     margin: 0 0 20px 0;
+    min-height: 92px;
+
+    &.empty{
+        border-color: @drag-and-drop-answer-container-border-color;
+    }
 
     .drag-and-drop-connect {
         &:after {
@@ -958,7 +963,7 @@
         box-shadow: @drag-and-drop-draggable-dragging-box-shadow;
     }
 
-    > div {
+     div {
         position: relative;
         -moz-text-overflow: ellipsis;
         text-overflow: ellipsis;
@@ -968,7 +973,7 @@
         min-width: 70px;
     }
 
-    > div:before {
+     div:before {
         width: 9px;
         height: 18px;
         content: "";
