@@ -184,20 +184,6 @@
     }
 }
 
-.xapi-error-container {
-    h1 {
-        font-family: @secondary-font;
-        font-size: 53px;
-        color: @xApi-error-header-color;
-        line-height: 100px;
-    }
-
-    .xapi-error-container-description {
-        color: @xApi-error-description-color;
-        font-size: 18px;
-    }
-}
-
 .content {
     background: @content-container-background-color;
     border-bottom: 3px solid @content-container-border-color;
@@ -208,31 +194,6 @@
     color: #3e3d40;
     font-size: 18px;
     box-shadow: @content-container-box-shadow;
-}
-
-.login {
-    max-width: @form-container-width;
-    margin: auto;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
-
-    h2 {
-        font-size: 28px;
-        color: @login-form-title-font-color;
-        text-align: center;
-        margin-bottom: 40px;
-        font-weight: 400;
-    }
-
-    footer {
-        font-weight: 300;
-        font-size: 12px;
-        color: #8c8c8e;
-        text-align: center;
-        max-width: 460px;
-        border-top: 1px solid @login-form-footer-border-top-color;
-        margin: 30px auto 0;
-        padding-top: 15px;
-    }
 }
 
 .content-holder {
@@ -421,60 +382,6 @@ form {
             background-color: @overlay-close-button-hover-background-color;
             background-image: @overlay-close-button-hover-background-image;
             box-shadow: @overlay-close-button-hover-shadow;
-        }
-    }
-}
-
-.select-container {
-    color: @fib-select-dropdown-list-font-color;
-    z-index: 10;
-
-    ul {
-        list-style: none;
-        padding: 0;
-        background-color: @fib-select-container-background-color;
-        border-radius: 5px;
-        font-size: 18px;
-        margin-top: 9px;
-        box-shadow: 0 0 8px -2px rgba(0, 0, 0, .1);
-
-        li {
-            min-height: 45px;
-            line-height: 45px;
-            word-wrap: break-word;
-            cursor: pointer;
-            padding: 6px 10px 6px 17px;
-
-            &:first-child {
-                border-top-left-radius: 5px;
-                border-top-right-radius: 5px;
-
-                &:after {
-                    width: 10px;
-                    height: 10px;
-                    background-color: @fib-select-container-background-color;
-                    position: absolute;
-                    content: '';
-                    transform: rotate(45deg);
-                    top: 4px;
-                    right: 19px;
-                }
-            }
-
-            &:last-child {
-                border-bottom-left-radius: 5px;
-                border-bottom-right-radius: 5px;
-            }
-
-            &:hover {
-                background-color: @fib-select-container-hover-background-color;
-
-                &:first-child {
-                    &:after {
-                        background-color: @fib-select-container-hover-background-color;
-                    }
-                }
-            }
         }
     }
 }
