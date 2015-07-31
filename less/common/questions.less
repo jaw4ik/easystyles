@@ -347,19 +347,35 @@
             }
         }
 
+        .statement-option-separator-wrapper {
+            display: table-cell;
+            width: 1px;
+            height: 100%;
+            vertical-align: middle;
+            background-color: @statement-answers-background-color;
+            
+            .statement-option-separator {
+                display: table-cell;
+                width: 1px;
+                height: 20px;
+                vertical-align: middle;
+                background-color: rgba(142,142,143,0.3);
+            }
+        }
+
         &:hover {
-            .statement-label, .statement-option {
+            .statement-label, .statement-option, .statement-option-separator-wrapper {
                 background-color: @statement-answers-background-color-hover;
             }
         }
 
         &.checked {
-            .statement-label, .statement-option {
+            .statement-label, .statement-option, .statement-option-separator-wrapper {
                 background-color: @statement-answers-background-color-checked;
             }
 
             &:hover {
-                .statement-label, .statement-option {
+                .statement-label, .statement-option, .statement-option-separator-wrapper {
                     background-color: @statement-answers-background-color-checked;
                 }
             }
