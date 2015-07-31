@@ -207,7 +207,7 @@
     font-family: @main-font;
     color: #3e3d40;
     font-size: 18px;
-    box-shadow:@content-container-box-shadow;
+    box-shadow: @content-container-box-shadow;
 }
 
 .login {
@@ -457,7 +457,7 @@ form {
                     content: '';
                     transform: rotate(45deg);
                     top: 4px;
-                    right:19px;
+                    right: 19px;
                 }
             }
 
@@ -572,18 +572,23 @@ form {
     &:hover {
         border-color: @objectives-list-item-hover-border-color;
     }
-    .objective-image-holder{
-        border-top-left-radius:  @objective-list-item-border-radius;
-        border-top-right-radius:  @objective-list-item-border-radius;
+
+    .objective-image-holder {
+        border-top-left-radius:  @objective-list-item-after-border-radius;
+        border-top-right-radius: @objective-list-item-after-border-radius;
+
+        &:after {
+            border-top-left-radius: @objective-list-item-after-border-radius;
+            border-top-right-radius: @objective-list-item-after-border-radius;
+        }
     }
 
     .objective-info {
         background: @objective-info-background-color;
         color: @objective-info-font-color;
         box-shadow: @objective-info-box-shadow;
-        border-bottom-left-radius:  @objective-list-item-border-radius;
-        border-bottom-right-radius:  @objective-list-item-border-radius;
-        
+        border-bottom-left-radius: @objective-list-item-border-radius;
+        border-bottom-right-radius: @objective-list-item-border-radius;
     }
 
     .canvas-styles {
