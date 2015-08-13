@@ -88,6 +88,11 @@ input:invalid {
     font-size: 18px;
     border: 2px solid black;
     font-family: @main-font;
+	
+	&.disabled {
+		cursor: default;
+		opacity: .5;
+	}
 
     &.default {
         max-width: 100%;
@@ -95,7 +100,7 @@ input:invalid {
         border-color: @button-default-border-color;
         color: @button-default-font-color;
 
-        &:hover {
+        &:not(.disabled):hover {
             background-color: @button-default-hover-background-color;
             color: @button-hover-default-font-color;
         }
@@ -110,7 +115,7 @@ input:invalid {
         height: 60px;
         max-width: 100%;
 
-        &:hover {
+        &:not(.disabled):hover {
             background-color: @button-primary-hover-background-color;
             border-color: @button-primary-hover-border-color;
             box-shadow: @button-prinary-hover-box-shadow;
@@ -130,7 +135,7 @@ input:invalid {
         position: relative;
         font-weight: 400;
 
-        &:hover {
+        &:not(.disabled):hover {
             .button-link-hover;
         }
     }
@@ -141,7 +146,7 @@ input:invalid {
         background-color: @button-danger-background-color;
         max-width: 100%;
 
-        &:hover {
+        &:not(.disabled):hover {
             color: @button-hover-danger-font-color;
             background-color: @button-hover-danger-background-color;
             border-color: @button-hover-danger-border-color;
@@ -152,7 +157,7 @@ input:invalid {
         border-color: @button-info-border-color;
         color: @button-info-font-color;
 
-        &:hover {
+        &:not(.disabled):hover {
             color: @button-hover-info-font-color;
             border-color: @button-hover-info-border-color;
         }
@@ -164,7 +169,7 @@ input:invalid {
         background-color: @button-success-background-color;
         font-weight: 400;
 
-        &:hover {
+        &:not(.disabled):hover {
             color: @button-hover-success-font-color;
             background-color: @button-hover-success-background-color;
         }
