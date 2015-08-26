@@ -18,12 +18,12 @@
                 vertical-align: middle;
 
                 &:hover {
-                    background-color: rgba(171, 187, 198, 0.2);
+                    background-color: @exit-course-button-hover-background-color;
                 }
 
                 &:after {
                     content: '';
-                    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABWUlEQVRIx82ULUgEURSFv7uM4A+mRVYwaRDrmiyym8SgNqMsiEW0iFHBZjQYTGtQWDAaDKLJYhNEkFWDYhBFZbCajmWEcXZ2duZN8cCUOe9+79w73IGQJG0on149/moIOAU2ya4pYNuLMXwzu0pLkWTAGrAF4KUtbAMbBA6CdAAUcsDmgJswzAkoqUfSHnAMDER9l5Z3gaV2ZlzCfUnDCcDepNuiwE/gBXiQVHNI3wJ8Bj6AFaAuaTEr0JNUBooh4DjwCBwF0IKZ1VMTJd1J8mOer2CdniLnG0m755nZWMwlXUADqAAzzjOUtCqpFLQ7CVTN7DbPRykBfcBIAGsm1J4AfidgERg1s7KZ3SfALoBl4LwTEGAhRWcVYAeoRo08f5v5NDPMrf8PjM7wEuh34Ag4BLqzV7au3ruk2XYJs+oMqJnZ2+8L1xl+A+vAdBjmmrAJTJjZdZz5A4Sm7TInbES0AAAAAElFTkSuQmCC') no-repeat 10px 10px #5fc0dd;
+                    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABWUlEQVRIx82ULUgEURSFv7uM4A+mRVYwaRDrmiyym8SgNqMsiEW0iFHBZjQYTGtQWDAaDKLJYhNEkFWDYhBFZbCajmWEcXZ2duZN8cCUOe9+79w73IGQJG0on149/moIOAU2ya4pYNuLMXwzu0pLkWTAGrAF4KUtbAMbBA6CdAAUcsDmgJswzAkoqUfSHnAMDER9l5Z3gaV2ZlzCfUnDCcDepNuiwE/gBXiQVHNI3wJ8Bj6AFaAuaTEr0JNUBooh4DjwCBwF0IKZ1VMTJd1J8mOer2CdniLnG0m755nZWMwlXUADqAAzzjOUtCqpFLQ7CVTN7DbPRykBfcBIAGsm1J4AfidgERg1s7KZ3SfALoBl4LwTEGAhRWcVYAeoRo08f5v5NDPMrf8PjM7wEuh34Ag4BLqzV7au3ruk2XYJs+oMqJnZ2+8L1xl+A+vAdBjmmrAJTJjZdZz5A4Sm7TInbES0AAAAAElFTkSuQmCC') no-repeat 10px 10px @exit-course-button-background-color;
                     border-radius: 50%;
                     display: inline-block;
                     width: 44px;
@@ -39,7 +39,7 @@
                 display: inline-block;
                 border-style: solid;
                 border-width: 6px 6px 0 6px;
-                border-color: #abbbc6 transparent transparent transparent;
+                border-color: @exit-course-button-expand-color transparent transparent transparent;
             }
         }
 
@@ -48,23 +48,23 @@
             position: absolute;
             top: 60px;
             right: 17px;
-            background-color: #fff;
+            background-color: @exit-course-menu-background-color;
             border-radius: 10px;
-            color: #444;
+            color: @exit-course-menu-font-color;
             cursor: pointer;
             font-size: 16px;
             font-family: Roboto;
             text-align: left;
             z-index: 10;
-            -webkit-box-shadow: 0px 1px 5px 0px #afb7be;
-            -moz-box-shadow: 0px 1px 5px 0px #afb7be;
-            box-shadow: 0px 1px 5px 0px #afb7be;
+            -webkit-box-shadow: 0px 1px 5px 0px @exit-course-menu-box-shadow-color;
+            -moz-box-shadow: 0px 1px 5px 0px @exit-course-menu-box-shadow-color;
+            box-shadow: 0px 1px 5px 0px @exit-course-menu-box-shadow-color;
 
             .exit-course-menu-item {
                 padding: 15px 75px 0 30px;
 
                 &:hover {
-                    background-color: #e0faff;
+                    background-color: @exit-course-menu-hover-background-color;
 
                     &:first-child {
                         border-radius: 10px 10px 0 0;
@@ -80,7 +80,7 @@
                     display: block;
                     margin: 15px -55px 0 -10px;
                     height: 1px;
-                    background-color: #ebebeb;
+                    background-color: @exit-course-menu-separator-line-color;
                 }
 
                 &:last-child {
@@ -99,7 +99,7 @@
             }
 
             .exit-course-button {
-                background-color: rgba(171, 187, 198, 0.2);
+                background-color: @exit-course-button-hover-background-color;
             }
         }
     }
