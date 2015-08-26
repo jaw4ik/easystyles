@@ -10,6 +10,7 @@
 
         .exit-course-button-container {
             cursor: pointer;
+            display: inline-block;
 
             .exit-course-button {
                 border-radius: 10px;
@@ -42,65 +43,65 @@
                 border-width: 6px 6px 0 6px;
                 border-color: @exit-course-button-expand-color transparent transparent transparent;
             }
-        }
 
-        .exit-course-menu {
-            display: none;
-            position: absolute;
-            top: 60px;
-            right: 22px;
-            background-color: @exit-course-menu-background-color;
-            border-radius: 10px;
-            color: @exit-course-menu-font-color;
-            cursor: pointer;
-            font-size: 16px;
-            font-family: Roboto;
-            text-align: left;
-            z-index: 10;
-            -webkit-box-shadow: 0px 1px 5px 0px @exit-course-menu-box-shadow-color;
-            -moz-box-shadow: 0px 1px 5px 0px @exit-course-menu-box-shadow-color;
-            box-shadow: 0px 1px 5px 0px @exit-course-menu-box-shadow-color;
+            .exit-course-menu {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 22px;
+                background-color: @exit-course-menu-background-color;
+                border-radius: 10px;
+                color: @exit-course-menu-font-color;
+                cursor: pointer;
+                font-size: 16px;
+                font-family: Roboto;
+                text-align: left;
+                z-index: 10;
+                -webkit-box-shadow: 0px 1px 5px 0px @exit-course-menu-box-shadow-color;
+                -moz-box-shadow: 0px 1px 5px 0px @exit-course-menu-box-shadow-color;
+                box-shadow: 0px 1px 5px 0px @exit-course-menu-box-shadow-color;
 
-            .exit-course-menu-item {
-                padding: 15px 75px 0 30px;
+                .exit-course-menu-item {
+                    padding: 15px 75px 0 30px;
 
-                &:hover {
-                    background-color: @exit-course-menu-hover-background-color;
+                    &:hover {
+                        background-color: @exit-course-menu-hover-background-color;
 
-                    &:first-child {
-                        border-radius: 10px 10px 0 0;
+                        &:first-child {
+                            border-radius: 10px 10px 0 0;
+                        }
+
+                        &:last-child {
+                            border-radius: 0 0 10px 10px;
+                        }
+                    }
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        margin: 15px -55px 0 -10px;
+                        height: 1px;
+                        background-color: @exit-course-menu-separator-line-color;
                     }
 
                     &:last-child {
-                        border-radius: 0 0 10px 10px;
+                        padding-bottom: 15px;
+
+                        &:after {
+                            display: none;
+                        }
                     }
                 }
+            }
 
-                &:after {
-                    content: '';
+            &.expanded {
+                .exit-course-menu {
                     display: block;
-                    margin: 15px -55px 0 -10px;
-                    height: 1px;
-                    background-color: @exit-course-menu-separator-line-color;
                 }
 
-                &:last-child {
-                    padding-bottom: 15px;
-
-                    &:after {
-                        display: none;
-                    }
+                .exit-course-button {
+                    background-color: @exit-course-button-hover-background-color;
                 }
-            }
-        }
-
-        &.expanded {
-            .exit-course-menu {
-                display: block;
-            }
-
-            .exit-course-button {
-                background-color: @exit-course-button-hover-background-color;
             }
         }
     }
