@@ -8,6 +8,30 @@
         position: relative;
         text-align: right;
 
+        .save-progress-status-text {
+            font-family: Roboto;
+            font-style: italic;
+            font-size: 13px;
+            margin-right: 10px;
+
+            .saved {
+                color: @exit-course-progress-saved-font-color;
+
+                &:before {
+                    content: "";
+                    background: @exit-course-progress-saved-image no-repeat;
+                    display: inline-block;
+                    width: 16px;
+                    height: 12px;
+                    margin-right: 6px;
+                }
+            }
+
+            .error {
+                color: @exit-course-progress-not-saved-error-color;
+            }
+        }
+
         .exit-course-button-container {
             cursor: pointer;
             display: inline-block;
@@ -25,7 +49,7 @@
 
                 &:after {
                     content: '';
-                    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABWUlEQVRIx82ULUgEURSFv7uM4A+mRVYwaRDrmiyym8SgNqMsiEW0iFHBZjQYTGtQWDAaDKLJYhNEkFWDYhBFZbCajmWEcXZ2duZN8cCUOe9+79w73IGQJG0on149/moIOAU2ya4pYNuLMXwzu0pLkWTAGrAF4KUtbAMbBA6CdAAUcsDmgJswzAkoqUfSHnAMDER9l5Z3gaV2ZlzCfUnDCcDepNuiwE/gBXiQVHNI3wJ8Bj6AFaAuaTEr0JNUBooh4DjwCBwF0IKZ1VMTJd1J8mOer2CdniLnG0m755nZWMwlXUADqAAzzjOUtCqpFLQ7CVTN7DbPRykBfcBIAGsm1J4AfidgERg1s7KZ3SfALoBl4LwTEGAhRWcVYAeoRo08f5v5NDPMrf8PjM7wEuh34Ag4BLqzV7au3ruk2XYJs+oMqJnZ2+8L1xl+A+vAdBjmmrAJTJjZdZz5A4Sm7TInbES0AAAAAElFTkSuQmCC') no-repeat 10px 10px @exit-course-button-background-color;
+                    background: @exit-course-button-image no-repeat 10px 10px @exit-course-button-background-color;
                     border-radius: 50%;
                     display: inline-block;
                     width: 44px;
@@ -33,6 +57,15 @@
                     margin-top: 6px;
                     margin-right: 6px;
                     position: relative;
+                }
+            }
+
+            &.disabled {
+                cursor: default;
+                opacity: .5;
+
+                .exit-course-button:hover {
+                    background-color: transparent;
                 }
             }
 
@@ -95,12 +128,14 @@
             }
 
             &.expanded {
-                .exit-course-menu {
-                    display: block;
-                }
+                &:not(.disabled) {
+                    .exit-course-menu {
+                        display: block;
+                    }
 
-                .exit-course-button {
-                    background-color: @exit-course-button-hover-background-color;
+                    .exit-course-button {
+                        background-color: @exit-course-button-hover-background-color;
+                    }
                 }
             }
         }
