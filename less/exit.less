@@ -1,0 +1,146 @@
+.exit-course-container {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+
+    .exit-course-wrapper {
+        padding-right: 5px;
+        position: relative;
+        text-align: right;
+
+        .save-progress-status-text {
+            font-family: Roboto;
+            font-style: italic;
+            font-size: 13px;
+            margin-right: 10px;
+
+            .saved {
+                color: @exit-course-progress-saved-font-color;
+                opacity: .5;
+
+                &:before {
+                    content: "";
+                    background: @exit-course-progress-saved-image no-repeat;
+                    display: inline-block;
+                    width: 16px;
+                    height: 12px;
+                    margin-right: 6px;
+                }
+            }
+
+            .error {
+                color: @exit-course-progress-not-saved-error-color;
+            }
+        }
+
+        .exit-course-button-container {
+            cursor: pointer;
+            display: inline-block;
+
+            .exit-course-button {
+                border-radius: 10px;
+                display: inline-block;
+                width: 56px;
+                height: 56px;
+                vertical-align: middle;
+
+                &:hover {
+                    background-color: @exit-course-button-hover-background-color;
+                }
+
+                &:after {
+                    content: '';
+                    background: @exit-course-button-image no-repeat 10px 10px @exit-course-button-background-color;
+                    border-radius: 50%;
+                    display: inline-block;
+                    width: 44px;
+                    height: 44px;
+                    margin-top: 6px;
+                    margin-right: 6px;
+                    position: relative;
+                }
+            }
+
+            &.disabled {
+                cursor: default;
+                opacity: .5;
+
+                .exit-course-button {
+                    &:hover{
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            &:after {
+                content: '';
+                display: inline-block;
+                border-style: solid;
+                border-width: 6px 6px 0 6px;
+                border-color: @exit-course-button-expand-color transparent transparent transparent;
+            }
+
+            .exit-course-menu {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 22px;
+                background-color: @exit-course-menu-background-color;
+                border-radius: 10px;
+                color: @exit-course-menu-font-color;
+                cursor: pointer;
+                font-size: 16px;
+                font-family: Roboto;
+                text-align: left;
+                z-index: 10;
+                -webkit-box-shadow: 0px 1px 5px 0px @exit-course-menu-box-shadow-color;
+                -moz-box-shadow: 0px 1px 5px 0px @exit-course-menu-box-shadow-color;
+                box-shadow: 0px 1px 5px 0px @exit-course-menu-box-shadow-color;
+
+                .exit-course-menu-item {
+                    padding: 15px 75px 0 30px;
+
+                    &:hover {
+                        background-color: @exit-course-menu-hover-background-color;
+
+                        &:first-child {
+                            border-radius: 10px 10px 0 0;
+                        }
+
+                        &:last-child {
+                            border-radius: 0 0 10px 10px;
+                        }
+                    }
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        margin: 15px -55px 0 -10px;
+                        height: 1px;
+                        background-color: @exit-course-menu-separator-line-color;
+                    }
+
+                    &:last-child {
+                        padding-bottom: 15px;
+
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &.expanded {
+                &:not(.disabled) {
+                    .exit-course-menu {
+                        display: block;
+                    }
+
+                    .exit-course-button {
+                        background-color: @exit-course-button-hover-background-color;
+                    }
+                }
+            }
+        }
+    }
+}
