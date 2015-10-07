@@ -38,7 +38,7 @@
 
 @navigation-home-link-background-color: rgba(66,66,76,.7);
 @navigation-home-link-background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAdCAYAAABSZrcyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTZGQjcxQTE1NkYwMTFFNUE3QzJGQjAyREM3MUQyREUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTZGQjcxQTI1NkYwMTFFNUE3QzJGQjAyREM3MUQyREUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFNkZCNzE5RjU2RjAxMUU1QTdDMkZCMDJEQzcxRDJERSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFNkZCNzFBMDU2RjAxMUU1QTdDMkZCMDJEQzcxRDJERSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po74KpcAAAGZSURBVHja7JQ9S8NAHMZP20EHcROngpNviNX61uog4uzqG1WsUkU/gJ/Gwa8gxaWjCB0VFHdB60vVVESX2vgcfQ5CSNL2eq2D/uFHkn/u8ntyCSds2xaarINXsKL7DF1xEpTsSpV0A+iINyh8Aym+vTtACJyAtEn5JkVSGGMv5hGgm6uSMSXfouAFjLvuxbgS8v6yabkUf4MCGPMZMwEsBkibkqcofgbRKmNVgLIJ+TYfJMWjNa7SJAPIOtWV71D8VIdYMeX4BKv1ytMO8YjmXjBdLYDXpF2KH8FwAzugZCYogHvwHsUPYKhBsSLuF8A5aJ/iPBg0JFYkQJEB1txyJb4HA4bFvgFk84DiO9AP+hxbpymO+IKz4F19AsHtUonldRZ8GpbLOuO5CmCFhRBzwAJ5UakO0CmaV+cgDnqk/Ea0vq4l7eIX6+/KwxpzEiDpCl4GxyDXbPkhWPLod7VCHuJxHnyAXpABba1YdlUXoAgi/3+7yWXP+vSjPv2FgDk1y6+43y8GzLsFXzwv8DrCn8+vLt2NHwEGANpfN4zcvyasAAAAAElFTkSuQmCC');
-@navigation-home-link-background-position: center;
+@navigation-home-link-background-position: 10px 9px;
 @navigation-home-link-hover-background-color: rgba(66,66,76,.9);;
 
 .button-link-hover {
@@ -494,10 +494,16 @@
     border-radius:0px;
 }
 
-.exit-course-container.exit-course-container .exit-course-wrapper .exit-course-button-container .exit-course-menu .exit-course-menu-item:hover:first-child{
-    border-radius:0px;
+.exit-course-container.exit-course-container {
+    vertical-align: top;
+    padding-top: 5px;
+    .exit-course-wrapper .exit-course-button-container .exit-course-menu .exit-course-menu-item:hover:first-child {
+        border-radius: 0px;
+    }
+    .exit-course-wrapper{
+        padding-right: 0;
+    }
 }
-
 .exit-course-container.exit-course-container .exit-course-wrapper .exit-course-button-container .exit-course-menu{
     box-shadow:none;
 }
@@ -555,11 +561,17 @@
 
 .exit-course-container.exit-course-container .exit-course-wrapper .exit-course-button-container:after{
     border-color:transparent;
-    border-top-color:  rgba(171,187,198,.4);
+    border-top-color: #76767d;
 }
-.button.button.button{
-    font-weight: 700;
-}
-.button.button.link{
-    font-weight: 400;
+.button.button {
+    &.button {
+        font-weight: 700;
+    }
+    &.link {
+        font-weight: 400;
+    }
+    &.medium{
+        width: 230px;
+        height:60px;
+    }
 }
