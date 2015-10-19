@@ -273,6 +273,39 @@
     }
 }
 
+.List.objectives-list-item {
+    border-radius: @objective-list-item-List-border-radius;
+    border-color:@objective-list-item-List-border-bottom-color;
+    border-bottom-color:@objective-list-item-List-border-bottom-color;
+    &.disabled {
+        cursor: default;
+    }
+    &:not(.disabled):hover {
+        border-color: @objectives-list-item-List-hover-border-color;
+    }
+    .objective-info {
+        background: @objective-info-List-background-color;
+        color: @objective-info-font-color;
+        border-radius: 0px;
+        box-shadow:none;
+       }
+    .canvas-styles {
+        color: @objective-list-item-List-canvas-background;
+        border-color: @objective-list-item-List-filled-canvas-background;
+    }
+    
+    .objective-progress-no-questions{
+        color: @objective-list-item-List-no-questions-font-color;
+    }
+    .mastered-score-tooltip .mastered-score-tooltip-text{
+        background-color: @objective-list-item-List-mastered-score-tooltip-text-background;
+        &:before{
+             border-top-color: @objective-list-item-List-mastered-score-tooltip-text-background;
+        }
+    }
+    
+}
+
 .overall-progress-wrapper {
     .overall-progress-score {
         font-family: @helper-color;
