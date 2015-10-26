@@ -289,11 +289,12 @@
         border-radius: 0px;
         box-shadow:none;
        }
-    .canvas-styles {
-        color: @objective-list-item-List-canvas-background;
-        border-color: @objective-list-item-List-filled-canvas-background;
+   .progressbar{
+        background-color: @objective-list-item-List-canvas-background;
+        .progressbar-value{
+            background-color: @objective-list-item-List-filled-canvas-background;
+        }
     }
-    
     .objective-progress-no-questions{
         color: @objective-list-item-List-no-questions-font-color;
     }
@@ -302,6 +303,9 @@
         &:before{
              border-top-color: @objective-list-item-List-mastered-score-tooltip-text-background;
         }
+    }
+    .objective-image-holder div{
+        background-color:@objective-thumbnail-List-background-color;
     }
     
 }
