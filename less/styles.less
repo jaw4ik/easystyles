@@ -546,6 +546,57 @@
     }
 }
 
+.submit-question-tooltip-container{
+    position: relative;
+    
+    &.show{
+        
+        .button{
+            
+            &:active,
+            &:focus{
+                + .submit-question-tooltip {
+                    opacity: 1;
+                    margin-bottom: 12px;
+                    transition: all 0.1s linear 0.1s;
+                }
+            }
+        }
+    }
+    
+    
+    
+    .submit-question-tooltip{
+        position: absolute;
+        left: 50%;
+        bottom: 100%;
+        width: 380px;
+        margin-bottom: 15px;
+        margin-left: -190px;
+        padding: 12px 20px;
+        font-size: 13px;
+        background-color: @mastered-score-tooltip-background-color;
+        color: #fff;
+        border-radius: 3px;
+        line-height: 22px;
+        word-wrap: break-word;
+        opacity: 0;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            margin-left: -9px;
+            border-style: solid;
+            border-width: 7px 6px 0 6px;
+            border-top-color: @mastered-score-tooltip-background-color;
+        }
+    }
+}
+
 @-moz-keyframes pulsate {
     0% {
         -moz-transform: scale(0.1, 0.1);
