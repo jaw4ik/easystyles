@@ -1,0 +1,140 @@
+.login {
+    max-width: @form-container-width;
+    margin: auto;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+
+    h2 {
+        font-size: 28px;
+        color: @login-form-title-font-color;
+        text-align: center;
+        margin-bottom: 40px;
+        font-weight: 400;
+    }
+
+    footer {
+        font-weight: 300;
+        font-size: 12px;
+        color: #8c8c8e;
+        text-align: center;
+        max-width: 460px;
+        border-top: 1px solid @login-form-footer-border-top-color;
+        margin: 30px auto 0;
+        padding-top: 15px;
+    }
+}
+
+.xapi-error-container {
+    h1 {
+        font-family: @secondary-font;
+        font-size: 53px;
+        color: @xApi-error-header-color;
+        line-height: 100px;
+    }
+
+    .xapi-error-container-description {
+        color: @xApi-error-description-color;
+        font-size: 18px;
+    }
+}
+form {
+    .form-row {
+        max-width: 380px;
+        margin: 0 auto 20px;
+        position: relative;
+        min-height: 90px;
+
+        input {
+            width: 100%;
+            max-width: 345px;
+            border: none;
+            border-bottom: 1px solid @form-input-border-color;
+            font-size: 22px;
+            color: @form-input-font-color;
+            position: relative;
+            font-family: @helper-color;
+            font-weight: 400;
+            outline: none;
+            z-index: 1;
+            padding: 15px 10px 15px 25px;
+            background: @form-input-pen-background-image no-repeat transparent 0px 50%;
+
+            &:hover {
+                border-color: @form-input-hover-border-color;
+                background: @form-input-pen-hover-background-image no-repeat transparent 0px 50%;
+            }
+
+            &:focus {
+                border-color: @form-input-hover-border-color;
+                background: @form-input-pen-hover-background-image no-repeat transparent 0px 50%;
+                box-shadow: @form-input-box-shadow;
+            }
+
+            + label {
+                font-family: @helper-color;
+                font-weight: 400;
+                position: absolute;
+                color: #c8d1d7;
+                z-index: 0;
+                transition: all linear .25s;
+                top: -10px;
+                left: 0;
+                font-size: 16px;
+            }
+
+            &.empty {
+                + label {
+                    top: 16px;
+                    font-size: 22px;
+                    left: 25px;
+                }
+
+                &:focus + label {
+                    top: -10px;
+                    left: 0;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .error-message {
+            color: @form-error-color;
+            font-size: 12px;
+        }
+
+        &.error {
+            input {
+                border-color: @form-error-color;
+                background-image: @form-error-pen-image;
+
+                &:hover {
+                    border-color: @form-input-hover-border-color;
+                    background-image: @form-input-pen-hover-background-image;
+                }
+            }
+        }
+
+        .primary {
+            width: 100%;
+            margin: 0 auto 20px;
+            padding: 0 20px;
+            overflow: visible;
+            text-overflow: initial;
+
+            span {
+                display: inline-block;
+                max-width: 95%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                vertical-align: middle;
+            }
+
+            &:after {
+                content: '*';
+            }
+        }
+
+        .link {
+            margin: 0 auto;
+        }
+    }
+}

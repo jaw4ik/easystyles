@@ -1,0 +1,14 @@
+{
+  "name": "easygenerator-easystyles",
+  "version": "1.0.0",
+  "homepage": "https://github.com/easygenerator/easystyles",
+  "authors": [
+    "easygenerator team"
+  ],
+  "description": "\"easystyles\"",
+  "main": "\"index.html\"",
+  "keywords": [
+    "easygenerator"
+  ],
+  "license": "Apache."
+}
