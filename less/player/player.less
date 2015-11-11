@@ -1,0 +1,55 @@
+html {
+    body {
+        .processing {
+            background: @player-background-color;
+        }
+
+        .video-js {
+            .vjs-control-bar {
+                opacity: 0.8;
+                border-radius: 5px;
+                background-color: @player-background-color;
+            }
+
+            .vjs-control-bar:hover {
+                opacity: 1;
+            }
+
+            .vjs-slider {
+                background-color: @player-progress-bar-color;
+            }
+
+            .vjs-progress-holder .vjs-load-progress {
+                background-color: @player-load-progress-color;
+            }
+
+            .vjs-play-progress {
+                background-color: @player-play-progress-color;
+            }
+
+            .vjs-progress-control .vjs-mouse-display:after {
+                background-color: @player-progress-tooltip-color;
+            }
+
+            &.vjs-using-native-controls {
+                .vjs-tech {
+                    background: @player-background-color;
+                }
+            }
+        }
+
+        &.background {
+            .vjs-using-native-controls {
+                &.video-js {
+                    background: @player-background-color;
+                }
+            }
+        }
+
+        &.no-background {
+            .media-processing {
+                background-color: @player-background-color;
+            }
+        }
+    }
+}
