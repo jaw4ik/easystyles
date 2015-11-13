@@ -1114,20 +1114,13 @@
         line-height: normal;
 
         .drag-and-drop-text-dropspot-tooltip-image {
-            display: none;
-        }
-
-        .drag-and-drop-text-dropspot-tooltip-text {
-            display: block;
+            -webkit-animation: bounce 1s infinite ease-out;
+            animation: bounce 1s infinite ease-out;
         }
     }
 
     &.dropped {
         .drag-and-drop-text-dropspot-tooltip-image {
-            display: none;
-        }
-
-        .drag-and-drop-text-dropspot-tooltip-text {
             display: none;
         }
     }
