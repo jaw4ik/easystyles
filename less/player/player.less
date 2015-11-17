@@ -32,15 +32,20 @@ html {
             }
 
             &.vjs-using-native-controls {
-				&.ios {
-					background: @player-background-color !important;
-					
-					.vjs-tech {
-						background: @player-background-color;
-					}
-				}
-                .vjs-tech {
-                    background: @player-background-color;
+				&.playing {
+                    &:before {
+                        background-image: @not-supported-player-background-pouse;
+                    }
+
+                    &.ios {
+                        &:before {
+                            background-image: @not-supported-player-background-play;
+                        }
+                    }
+                }
+
+                &:before {
+                    background-image: @not-supported-player-background-play;
                 }
             }
         }
