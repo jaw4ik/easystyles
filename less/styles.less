@@ -240,6 +240,7 @@
 .objectives-list-item {
     border-bottom-color: @objectives-list-item-border-color;
     border-radius: @objective-list-item-border-radius;
+    box-shadow:  0px 1px 3px 0px rgba(0,0,0,0.3);
 
 	&.disabled {
 		cursor: default;
@@ -344,9 +345,9 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 550px;
+        width: 595px;
         margin-top: -300px;
-        margin-left: -275px;
+        margin-left: -298px;
         text-align: left;
 
         &:after {
@@ -361,7 +362,7 @@
         .top-section {
             position: relative;
             height: 27px;
-            width: 526px;
+            width: 570px;
             background-color: @finish-course-popup-color;
             background-image: @finish-course-popup-background-image;
             background-repeat: repeat;
@@ -461,9 +462,13 @@
 
                 .button-wrapper {
                     display: inline-block;
-                    width: 230px;
+                    width: 270px;
                     margin-right: 25px;
                     vertical-align: middle;
+                    
+                    button{
+                        font-size: 15px;
+                    }
 
                     &:last-child {
                         margin-right: 0;
