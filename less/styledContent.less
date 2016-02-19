@@ -122,11 +122,12 @@
 
     .table-wrapper {
         .styled-content-table();
+
         ul, ol {
             padding-left: 0;
             li a {
                 word-break: break-all;
-            }        
+            }
         }
     }
 
@@ -155,10 +156,10 @@
             h3 {
                 display: inline;
             }
-			
-			p {
-			    display: inline;
-			}
+
+            p {
+                display: inline;
+            }
         }
     }
 
@@ -191,10 +192,10 @@
             h3 {
                 display: inline;
             }
-			
-			p {
-			    display: inline;
-			}
+
+            p {
+                display: inline;
+            }
         }
     }
 
@@ -206,6 +207,7 @@
 
     .image-wrapper {
         max-width: 100%;
+        clear: both;
 
         &[style*="float:left"],
         &[style*="float: left"] {
@@ -222,7 +224,15 @@
             max-width: 100%;
         }
     }
-    
+
+        .image-wrapper ~ .image-wrapper {
+            clear: none;
+        }
+
+    &.hotspot-on-image-container {
+        text-align: center;
+    }
+
     iframe {
         max-width: 100%;
     }
