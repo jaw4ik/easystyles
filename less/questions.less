@@ -816,7 +816,6 @@
     border-radius: 7px;
     font-size: @text-matching-target-font-size;
     font-family: @text-matching-font-family;
-    cursor: move;
     display: block;
     height: 100%;
     position: relative;
@@ -1018,7 +1017,6 @@
     background-color: @drag-and-drop-draggable-background-color;
     padding: 6px 10px;
     white-space: nowrap;
-    cursor: move;
     font-size: @drag-and-drop-draggable-font-size;
     height: 52px;
     letter-spacing: 0, 1px;
@@ -1230,5 +1228,72 @@
             color: #41b7d8;
             opacity: 1;
         }
+    }
+}
+
+.ranking-item {
+    position: relative;
+    display: block;
+    padding: 15px 15px 15px 40px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    background-color: @ranking-text-item-background-color;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,.3);
+    font-family: @main-font;
+    font-size: 18px;
+    line-height: 30px;
+    color: @ranking-text-item-font-color;
+    transition-property: box-shadow, background-color;
+    transition-timing-function: linear;
+    transition-duration: .2s;
+
+    &:hover,
+    &.gu-mirror {
+        box-shadow: 0px 2px 3px 0px rgba(0,0,0,.3);
+        background-color: @ranking-text-item-hover-background-color;
+        
+        .ranking-item-icon {
+            &:before {
+                border-bottom-color: @ranking-text-item-icon-hover-background-color;
+            }
+
+            &:after {
+                border-top-color: @ranking-text-item-icon-hover-background-color;
+            }
+        }
+    }
+        
+    .ranking-item-icon {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        margin-top: -8px;
+        width: 11px;
+        height: 16px;
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: transparent;
+        }
+
+        &:before {
+            top: 0;
+            border-width: 0 5px 5px 5px;
+            border-bottom-color: @ranking-text-item-icon-background-color;
+        }
+
+        &:after {
+            bottom: 0;
+            border-width: 5px 5px 0 5px;
+            border-top-color: @ranking-text-item-icon-background-color;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
     }
 }
