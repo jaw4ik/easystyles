@@ -233,13 +233,13 @@
     font-family: @secondary-font;
 }
 
-.objective-info {
-    color: @objective-title-font-color;
+.section {
+    color: @section-title-font-color;
 }
 
-.objectives-list-item {
-    border-bottom-color: @objectives-list-item-border-color;
-    border-radius: @objective-list-item-border-radius;
+.sections-list-item {
+    border-bottom-color: @sections-list-item-border-color;
+    border-radius: @section-list-item-border-radius;
     box-shadow:  0px 1px 3px 0px rgba(0,0,0,0.3);
 
 	&.disabled {
@@ -247,67 +247,67 @@
 	}
 	
     &:not(.disabled):hover {
-        border-color: @objectives-list-item-hover-border-color;
+        border-color: @sections-list-item-hover-border-color;
     }
 
-    .objective-image-holder {
-        border-top-left-radius:  @objective-list-item-after-border-radius;
-        border-top-right-radius: @objective-list-item-after-border-radius;
-        background-color: @objective-thumbnail-background-color;
+    .section-image-holder {
+        border-top-left-radius:  @section-list-item-after-border-radius;
+        border-top-right-radius: @section-list-item-after-border-radius;
+        background-color: @section-thumbnail-background-color;
 
         &:after {
-            border-top-left-radius: @objective-list-item-after-border-radius;
-            border-top-right-radius: @objective-list-item-after-border-radius;
+            border-top-left-radius: @section-list-item-after-border-radius;
+            border-top-right-radius: @section-list-item-after-border-radius;
         }
     }
 
-    .objective-info {
-        background: @objective-info-background-color;
-        color: @objective-info-font-color;
-        box-shadow: @objective-info-box-shadow;
-        border-bottom-left-radius: @objective-list-item-border-radius;
-        border-bottom-right-radius: @objective-list-item-border-radius;
+    .section-info {
+        background: @section-info-background-color;
+        color: @section-info-font-color;
+        box-shadow: @section-info-box-shadow;
+        border-bottom-left-radius: @section-list-item-border-radius;
+        border-bottom-right-radius: @section-list-item-border-radius;
     }
 
     .canvas-styles {
-        color: @objective-list-item-canvas-background;
-        border-color: @objective-list-item-filled-canvas-background;
+        color: @section-list-item-canvas-background;
+        border-color: @section-list-item-filled-canvas-background;
     }
 }
 
-.List.objectives-list-item {
-    border-radius: @objective-list-item-List-border-radius;
-    border-color:@objective-list-item-List-border-bottom-color;
-    border-bottom-color:@objective-list-item-List-border-bottom-color;
+.List.sections-list-item {
+    border-radius: @section-list-item-List-border-radius;
+    border-color:@section-list-item-List-border-bottom-color;
+    border-bottom-color:@section-list-item-List-border-bottom-color;
     &.disabled {
         cursor: default;
     }
     &:not(.disabled):hover {
-        border-color: @objectives-list-item-List-hover-border-color;
+        border-color: @sections-list-item-List-hover-border-color;
     }
-    .objective-info {
-        background: @objective-info-List-background-color;
-        color: @objective-info-font-color;
+    .section-info {
+        background: @section-info-List-background-color;
+        color: @section-info-font-color;
         border-radius: 0px;
         box-shadow:none;
        }
    .progressbar{
-        background-color: @objective-list-item-List-canvas-background;
+        background-color: @section-list-item-List-canvas-background;
         .progressbar-value{
-            background-color: @objective-list-item-List-filled-canvas-background;
+            background-color: @section-list-item-List-filled-canvas-background;
         }
     }
-    .objective-progress-no-questions{
-        color: @objective-list-item-List-no-questions-font-color;
+    .section-progress-no-questions{
+        color: @section-list-item-List-no-questions-font-color;
     }
     .mastered-score-tooltip .mastered-score-tooltip-text{
-        background-color: @objective-list-item-List-mastered-score-tooltip-text-background;
+        background-color: @section-list-item-List-mastered-score-tooltip-text-background;
         &:before{
-             border-top-color: @objective-list-item-List-mastered-score-tooltip-text-background;
+             border-top-color: @section-list-item-List-mastered-score-tooltip-text-background;
         }
     }
-    .objective-image-holder div{
-        background-color:@objective-thumbnail-List-background-color;
+    .section-image-holder div{
+        background-color:@section-thumbnail-List-background-color;
     }
     
 }
@@ -325,10 +325,10 @@
     }
 }
 
-.objective-image-wrapper {
+.section-image-wrapper {
     .canvas-styles {
-        color: @objective-canvas-background;
-        border-color: @objective-canvas-filled-background;
+        color: @section-canvas-background;
+        border-color: @section-canvas-filled-background;
     }
 }
 
